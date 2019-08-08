@@ -30,12 +30,15 @@ class goldController extends Controller
             //sum(par): tính tổng dữ liệu trong cột pars
             // return view('gold', ['gold' => $gold , 'sum' => $sum, 'sum2' => $sum2]);
             if($sumpar1 == $sumgross1){
-            return view('gold', ['gold' => $gold , 'sum' => $sum, 'sum2' => $sum2, 'sumgross' => $sumgross, 'sumpar' => $sumpar, 'sumgross2' => $sumgross2, 'sumpar2' => $sumpar2]);
+
+            return view('gold', ['gold' => $gold , 'sum' => $sum, 'sum2' => $sum2, 'sumgross' => $sumgross, 'sumpar' => $sumpar, 'sumgross1' => $sumgross1, 'sumpar1' => $sumpar1, 'sumpar2' => $sumpar2, 'sumgross2'=> $sumgross2]);
+
             }
             return view('gold', ['gold' => $gold , 'sum' => $sum, 'sum2' => $sum2, 'sumgross' => $sumgross, 'sumpar' => $sumpar]);
 
         }
             else{
+                
                 return view('gold', ['gold' => $gold , 'sum' => $sum, 'sum2' => $sum2]);
             }
         
