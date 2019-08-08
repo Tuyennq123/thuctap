@@ -27,7 +27,12 @@ Route::get('demo2', function () {
     return view('demo2');
 });
 
-// Route::get('/tablee', function () {
-//     return view('tablee');
+
 
 Route::get('gold', 'goldController@index')->name('gold');
+Route::get('tinhtong', 'tinhtongController@index')->name('tinhtong');
+
+
+
+
+;

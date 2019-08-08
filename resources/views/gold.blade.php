@@ -16,6 +16,7 @@
 
 </head>
 <body>
+
 <div class="header">
 <nav class="navbar navbar-expand-md navbar-light sticky-top">
 		<a class="navbar-branch" href="#">
@@ -58,38 +59,29 @@
             <table class="table table-bordered">
     <thead>
       <tr>
-        <th>STT</th>
-        <th>Tên chương trình</th>
-        <th>Ảnh</th>
-        <th>Bắn noti</th>
-        <th>Giờ phát</th>
-        <th>Giờ kết thúc</th>
-        <th>Link face</th>
-        <th>Link youtube</th>
-        <th>Thao tác</th>
+        <th>Hole</th>
+            @foreach($gold as $value)  
+              <td>{{$value->id}}</td>
+            @endforeach
+            <td>Total</td>
       </tr>
-    </thead>
-    <tbody>
-    @foreach($gold as $value)
       <tr>
-        <td>{{$value->id}}</td>
-        <td><b>{{$value->name}}</b></td>
-        <td><img src="{{$value->img}}"></td>
-        <td>Noti</td>
-        <td>{{$value->start}}</td>
-        <td>{{$value->finish}}</td>
-        <td><a href="#">{{$value->face}}</a></td>
-        <td><a href="#">{{$value->youtube}}</a></td>
-        <td>
-         <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i> Xóa</button>
-         <button type="button" class="btn btn-info">Duyệt</button>
-       </td>
+        <th>Par</th>
+            @foreach($gold as $value)
+              <td>{{$value->par}}</td>
+            @endforeach 
+            <td><b>{{$sum}}</b></td>
       </tr>
-      @endforeach
-    </tbody>
+       <th>Gross</th>
+            @foreach($gold as $value)
+              <td>{{$value->gross}}</td>
+            @endforeach 
+            <td><b>{{$sum2}}</b></td>
+      </tr>
+
+    </thead>
   </table>
-  <button style="float:left" type="button" class="btn btn-info">Thêm chương trình</button>
-  <button style="float:right" type="button" class="btn btn-info">Lưu</button>
+  
         <div>
     <div>
 </div>
