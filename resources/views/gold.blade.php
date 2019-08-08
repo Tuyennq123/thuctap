@@ -64,7 +64,8 @@
               <td>{{$value->id}}</td>
             @endforeach
             <td>Total</td>
-            <td>Total2</td>
+            <td>Total9</td>
+            <td>Total6</td>
             <td>Total3</td>
             
       </tr>
@@ -74,42 +75,50 @@
             @foreach($gold as $value)
               <td>{{$value->par}}</td>
             @endforeach 
-
+            
+             <!-- Tổng điểm Par 18 cột -->
             <td><b>{{$sum}}</b></td>
 
+             <!-- Tổng điểm 9 lỗ -->
+            @if(isset($sumpar2))
+            <td><b>{{$sumpar2}}</b></td>
+            @endif
+
+            <!-- Tổng điểm 6 lỗ -->
             @if(isset($sumpar))
             <td><b>{{$sumpar}}</b></td>
             @endif
-
+            
+            <!-- Tổng điểm 3 lỗ -->
             @if(isset($sumpar1))
             <td><b>{{$sumpar1}}</b></td>
             @endif
-            
-           
-
-           
-            
-            
       </tr>
        <th>Gross</th>
-
+          
             @foreach($gold as $value)
               <td>{{$value->gross}}</td>
             @endforeach 
 
+            <!-- Tổng điểm Gross 18 cột -->
             <td><b>{{$sum2}}</b></td>
 
+
+            <!-- Tổng điểm 9 lỗ -->
+            @if(isset($sumgross2))
+            <td><b>{{$sumgross2}}</b></td>
+            @endif
+            
+            <!-- Tổng điểm 6 lỗ -->
             @if(isset($sumgross))
             <td><b>{{$sumgross}}</b></td>
             @endif
-            
+
+            <!-- Tổng điểm 3 lỗ -->
             @if(isset($sumgross1))
             <td><b>{{$sumgross1}}</b></td>
             @endif
-            
       </tr>
-
-
     </thead>
   </table>
   
