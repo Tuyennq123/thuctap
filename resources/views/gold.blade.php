@@ -64,20 +64,51 @@
               <td>{{$value->id}}</td>
             @endforeach
             <td>Total</td>
+            <td>Total2</td>
+            <td>Total3</td>
+            
       </tr>
       <tr>
         <th>Par</th>
+
             @foreach($gold as $value)
               <td>{{$value->par}}</td>
             @endforeach 
+
             <td><b>{{$sum}}</b></td>
+
+            @if(isset($sumpar))
+            <td><b>{{$sumpar}}</b></td>
+            @endif
+
+            @if(isset($sumpar1))
+            <td><b>{{$sumpar1}}</b></td>
+            @endif
+            
+           
+
+           
+            
+            
       </tr>
        <th>Gross</th>
+
             @foreach($gold as $value)
               <td>{{$value->gross}}</td>
             @endforeach 
+
             <td><b>{{$sum2}}</b></td>
+
+            @if(isset($sumgross))
+            <td><b>{{$sumgross}}</b></td>
+            @endif
+            
+            @if(isset($sumgross1))
+            <td><b>{{$sumgross1}}</b></td>
+            @endif
+            
       </tr>
+
 
     </thead>
   </table>
