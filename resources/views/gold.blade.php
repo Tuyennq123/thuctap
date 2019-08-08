@@ -80,18 +80,18 @@
             <td><b>{{$sum}}</b></td>
 
              <!-- Tổng điểm 9 lỗ -->
-            @if(isset($sumpar2))
-            <td><b>{{$sumpar2}}</b></td>
+             @if(isset($sumpar))
+            <td><b>{{$sumpar}}</b></td>
             @endif
 
             <!-- Tổng điểm 6 lỗ -->
-            @if(isset($sumpar))
-            <td><b>{{$sumpar}}</b></td>
+            @if(isset($sumpar1))
+            <td><b>{{$sumpar1}}</b></td>
             @endif
             
             <!-- Tổng điểm 3 lỗ -->
-            @if(isset($sumpar1))
-            <td><b>{{$sumpar1}}</b></td>
+            @if(isset($sumpar2))
+            <td><b>{{$sumpar2}}</b></td>
             @endif
       </tr>
        <th>Gross</th>
@@ -105,18 +105,18 @@
 
 
             <!-- Tổng điểm 9 lỗ -->
-            @if(isset($sumgross2))
-            <td><b>{{$sumgross2}}</b></td>
-            @endif
-            
-            <!-- Tổng điểm 6 lỗ -->
             @if(isset($sumgross))
             <td><b>{{$sumgross}}</b></td>
             @endif
-
-            <!-- Tổng điểm 3 lỗ -->
+            
+            <!-- Tổng điểm 6 lỗ -->
             @if(isset($sumgross1))
             <td><b>{{$sumgross1}}</b></td>
+            @endif
+
+            <!-- Tổng điểm 3 lỗ -->
+            @if(isset($sumgross2))
+            <td><b>{{$sumgross2}}</b></td>
             @endif
       </tr>
     </thead>
