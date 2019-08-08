@@ -77,21 +77,21 @@
             @endforeach 
             
              <!-- Tổng điểm Par 18 cột -->
-            <td><b>{{$sum}}</b></td>
+            <td class="total-par"><b>{{$sumpar}}</b></td>
 
              <!-- Tổng điểm 9 lỗ -->
-             @if(isset($sumpar))
-            <td><b>{{$sumpar}}</b></td>
+             @if(isset($sumpar9))
+            <td class="total-9"><b>{{$sumpar9}}</b></td>
             @endif
 
             <!-- Tổng điểm 6 lỗ -->
-            @if(isset($sumpar1))
-            <td><b>{{$sumpar1}}</b></td>
+            @if(isset($sumpar6))
+            <td class="total-6"><b>{{$sumpar6}}</b></td>
             @endif
             
             <!-- Tổng điểm 3 lỗ -->
-            @if(isset($sumpar2))
-            <td><b>{{$sumpar2}}</b></td>
+            @if(isset($sumpar3))
+            <td class="total-3"><b>{{$sumpar3}}</b></td>
             @endif
       </tr>
        <th>Gross</th>
@@ -101,22 +101,22 @@
             @endforeach 
 
             <!-- Tổng điểm Gross 18 cột -->
-            <td><b>{{$sum2}}</b></td>
+            <td class="total-gross"><b>{{$sumgross}}</b></td>
 
 
             <!-- Tổng điểm 9 lỗ -->
-            @if(isset($sumgross))
-            <td><b>{{$sumgross}}</b></td>
+            @if(isset($sumgross9))
+            <td class="total-9"><b>{{$sumgross9}}</b></td>
             @endif
             
             <!-- Tổng điểm 6 lỗ -->
-            @if(isset($sumgross1))
-            <td><b>{{$sumgross1}}</b></td>
+            @if(isset($sumgross6))
+            <td class="total-6"><b>{{$sumgross6}}</b></td>
             @endif
 
             <!-- Tổng điểm 3 lỗ -->
-            @if(isset($sumgross2))
-            <td><b>{{$sumgross2}}</b></td>
+            @if(isset($sumgross3))
+            <td class="total-3"><b>{{$sumgross3}}</b></td>
             @endif
       </tr>
     </thead>

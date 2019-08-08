@@ -7,42 +7,64 @@ class goldController extends Controller
     public function index (){
         $gold = gold::all(); //lấy toàn bộ dữ liệu
 
-        $sum = gold::sum('par'); // tính tổng dữ liệu trong cột par
+        $sumpar = gold::sum('par'); // tính tổng dữ liệu trong cột par
 
-        $sum2 = gold::sum('gross'); // tính tổng dữ liệu trong cột gross
+        $sumgross = gold::sum('gross'); // tính tổng dữ liệu trong cột gross
 
-        $sumpar= gold::all('par')->reverse()->take(9)->sum('par');
+        $sumpar3= gold::all('par')->reverse()->take(3)->sum('par'); 
 
-        $sumgross= gold::all('gross')->reverse()->take(9)->sum('gross');
+        $sumgross3= gold::all('gross')->reverse()->take(3)->sum('gross');
+        
+        $sumpar6= gold::all('par')->reverse()->take(6)->sum('par');
 
-        $sumpar1= gold::all('par')->reverse()->take(6)->sum('par');
+        $sumgross6= gold::all('gross')->reverse()->take(6)->sum('gross');
 
-        $sumgross1= gold::all('gross')->reverse()->take(6)->sum('gross');
+        $sumpar9= gold::all('par')->reverse()->take(9)->sum('par');
 
-        $sumpar2= gold::all('par')->reverse()->take(3)->sum('par');
-
-        $sumgross2= gold::all('gross')->reverse()->take(3)->sum('gross');
+        $sumgross9= gold::all('gross')->reverse()->take(9)->sum('gross');
         
         
-        if($sum == $sum2){
+        if($sumpar == $sumgross){
+
             //hàm reverse giúp đảo ngược dữ liệu
+
             //take(3): giúp lấy ra 3 dữ liệu, mặc định lấy 3 dữ liệu đầu , kết hợp reverse giúp lấy 3 dữ liệu cuối
+
             //sum(par): tính tổng dữ liệu trong cột pars
+
             // return view('gold', ['gold' => $gold , 'sum' => $sum, 'sum2' => $sum2]);
-            if($sumpar1 == $sumgross1){
 
-            return view('gold', ['gold' => $gold , 'sum' => $sum, 'sum2' => $sum2, 'sumgross' => $sumgross, 'sumpar' => $sumpar, 'sumgross1' => $sumgross1, 'sumpar1' => $sumpar1, 'sumpar2' => $sumpar2, 'sumgross2'=> $sumgross2]);
 
-            }
-            return view('gold', ['gold' => $gold , 'sum' => $sum, 'sum2' => $sum2, 'sumgross' => $sumgross, 'sumpar' => $sumpar]);
+            if($sumpar9 == $sumgross9){
 
-        }
-            else{
+                    if($sumpar6 == $sumgross6){
                 
-                return view('gold', ['gold' => $gold , 'sum' => $sum, 'sum2' => $sum2]);
-            }
-        
-    }
-   
-}
+                    return view('gold', ['gold' => $gold , 'sumpar' => $sumpar, 'sumgross' => $sumgross,'sumgross9' => $sumgross9,
 
+                    'sumpar9' => $sumpar9, 'sumgross6' => $sumgross6, 'sumpar6' => $sumpar6,'sumgross3' => $sumgross3, 'sumpar3' => $sumpar3 ]);
+
+            }
+
+
+                    return view('gold', ['gold' => $gold , 'sumpar' => $sumpar, 'sumgross' => $sumgross,'sumgross9' => $sumgross9,
+
+                     'sumpar9' => $sumpar9, 'sumgross6' => $sumgross6, 'sumpar6' => $sumpar6 ]);
+
+            }
+
+
+                    return view('gold', ['gold' => $gold , 'sumpar' => $sumpar, 'sumgross' => $sumgross,
+
+                    'sumgross9' => $sumgross9, 'sumpar9' => $sumpar9]);
+
+
+            
+        }
+        else{   
+                    return view('gold', ['gold' => $gold , 'sumpar' => $sumpar, 'sumgross' => $sumgross]);
+            }
+   
+    }
+
+    
+}
